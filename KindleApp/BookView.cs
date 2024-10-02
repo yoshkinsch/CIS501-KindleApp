@@ -42,12 +42,6 @@ namespace KindleApp
 
         }
 
-        private void GoToPageButton_Click(object sender, EventArgs e)
-        {
-            //Implement
-
-        }
-
         private void FlipBackwardButton_Click(object sender, EventArgs e)
         {
             //Implement
@@ -60,6 +54,15 @@ namespace KindleApp
 
         }
 
+        private void PageNumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GoToBookmarkButton_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
     }
 }

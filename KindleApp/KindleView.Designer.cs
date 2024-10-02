@@ -30,13 +30,15 @@
         {
             SyncButton = new Button();
             OpenButton = new Button();
+            BookListView = new ListView();
             SuspendLayout();
             // 
             // SyncButton
             // 
-            SyncButton.Location = new Point(118, 364);
+            SyncButton.Location = new Point(103, 273);
+            SyncButton.Margin = new Padding(3, 2, 3, 2);
             SyncButton.Name = "SyncButton";
-            SyncButton.Size = new Size(153, 67);
+            SyncButton.Size = new Size(134, 50);
             SyncButton.TabIndex = 0;
             SyncButton.Text = "Sync";
             SyncButton.UseVisualStyleBackColor = true;
@@ -44,21 +46,32 @@
             // 
             // OpenButton
             // 
-            OpenButton.Location = new Point(525, 364);
+            OpenButton.Location = new Point(459, 273);
+            OpenButton.Margin = new Padding(3, 2, 3, 2);
             OpenButton.Name = "OpenButton";
-            OpenButton.Size = new Size(159, 67);
+            OpenButton.Size = new Size(139, 50);
             OpenButton.TabIndex = 1;
             OpenButton.Text = "Open";
             OpenButton.UseVisualStyleBackColor = true;
             OpenButton.Click += OpenButton_Click;
             // 
+            // BookListView
+            // 
+            BookListView.Location = new Point(7, 10);
+            BookListView.Name = "BookListView";
+            BookListView.Size = new Size(681, 258);
+            BookListView.TabIndex = 2;
+            BookListView.UseCompatibleStateImageBehavior = false;
+            // 
             // KindleView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
+            Controls.Add(BookListView);
             Controls.Add(OpenButton);
             Controls.Add(SyncButton);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "KindleView";
             Text = "Kindle";
             ResumeLayout(false);
@@ -68,5 +81,6 @@
 
         private Button SyncButton;
         private Button OpenButton;
+        private ListView BookListView;
     }
 }
