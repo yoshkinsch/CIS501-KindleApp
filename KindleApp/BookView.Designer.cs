@@ -35,7 +35,7 @@
             FlipForwardButton = new Button();
             BookmarkComboBox = new ComboBox();
             PageNumberTextBox = new TextBox();
-            PageNumberaLabel = new Label();
+            PageNumberLabel = new Label();
             GoToBookmarkButton = new Button();
             SuspendLayout();
             // 
@@ -110,14 +110,14 @@
             PageNumberTextBox.TabIndex = 7;
             PageNumberTextBox.TextChanged += PageNumberTextBox_TextChanged;
             // 
-            // PageNumberaLabel
+            // PageNumberLabel
             // 
-            PageNumberaLabel.AutoSize = true;
-            PageNumberaLabel.Location = new Point(241, 146);
-            PageNumberaLabel.Name = "PageNumberaLabel";
-            PageNumberaLabel.Size = new Size(38, 15);
-            PageNumberaLabel.TabIndex = 8;
-            PageNumberaLabel.Text = "label1";
+            PageNumberLabel.AutoSize = true;
+            PageNumberLabel.Location = new Point(241, 146);
+            PageNumberLabel.Name = "PageNumberLabel";
+            PageNumberLabel.Size = new Size(38, 15);
+            PageNumberLabel.TabIndex = 8;
+            PageNumberLabel.Text = "label1";
             // 
             // GoToBookmarkButton
             // 
@@ -135,7 +135,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 338);
             Controls.Add(GoToBookmarkButton);
-            Controls.Add(PageNumberaLabel);
+            Controls.Add(PageNumberLabel);
             Controls.Add(PageNumberTextBox);
             Controls.Add(BookmarkComboBox);
             Controls.Add(FlipForwardButton);
@@ -159,7 +159,7 @@
         private Button FlipForwardButton;
         private ComboBox BookmarkComboBox;
         private TextBox PageNumberTextBox;
-        private Label PageNumberaLabel;
+        private Label PageNumberLabel;
         private Button GoToBookmarkButton;
     }
 }
