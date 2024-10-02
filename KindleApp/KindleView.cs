@@ -14,13 +14,34 @@ namespace KindleApp
 
         private void SyncButton_Click(object sender, EventArgs e)
         {
-            //Implement Sync Button
+            buttonClicked(State.SyncLibrary, GetIdOfSelectedBook());
 
         }
 
         private void OpenButton_Click(object sender, EventArgs e)
         {
-            //Implement open Button
+            buttonClicked(State.SelectBook, GetIdOfSelectedBook());
+        }
+
+        private int GetIdOfSelectedBook()
+        {
+
+        }
+
+        public void Update(State s)
+        {
+
+        }
+
+        private void LoadListView()
+        {
+            BookListView.Clear();
+
+            foreach (KeyValuePair<int,Book> kvp in data._books)
+            {
+                ListViewItem book = new ListViewItem(kvp.Value.);
+            }
+
         }
     }
 }
