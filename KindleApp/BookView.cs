@@ -18,7 +18,7 @@
 
         private void LoadBookmarkComboBox()
         {
-            BookmarkComboBox.Clear();
+            BookmarkComboBox.Items.Clear();
             int i = 1;
             foreach (int bm in bookmarks)
             {

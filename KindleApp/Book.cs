@@ -15,11 +15,12 @@ namespace KindleApp
 
         public int currentPage = 1;
 
-        public Book(string n, string a, int iden)
+        public Book(string n, string a, int iden, int page)
         {
             name = n;
             author = a;
             ID = iden;
+            pages = page;
         }
     }
 }
