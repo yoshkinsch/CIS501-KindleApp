@@ -17,11 +17,11 @@ namespace KindleApp
             // see https://aka.ms/applicationconfiguration.
             
             ApplicationConfiguration.Initialize();
-<<<<<<< Updated upstream
-=======
-            
->>>>>>> Stashed changes
-            Application.Run(new KindleView());
+            MiniKindle model = new MiniKindle();
+            ControllerForKindle controllerK = new ControllerForKindle(model);
+            KindleView viewK = new KindleView(model, controllerK.buttonclicked);
+            controllerK.setupDel(viewK.Update);
+            Application.Run(viewK);
         }
     }
 }
