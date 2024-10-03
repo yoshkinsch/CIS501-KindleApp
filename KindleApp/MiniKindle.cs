@@ -17,7 +17,7 @@ namespace KindleApp
             _bookmarks = new Dictionary<int, int[]>();
         }
 
-        public void UpdateLib(List<Book> books)
+        public void UpdateLib()
         {
             //Implement UpdateLib
 
