@@ -10,6 +10,7 @@ namespace KindleApp
     {
         public Dictionary<int, Book> _books;
         public Dictionary<int, int[]> _bookmarks;
+        public Library _library = new Library();
 
         public MiniKindle()
         {
