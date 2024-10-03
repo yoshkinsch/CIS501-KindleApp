@@ -95,11 +95,5 @@ namespace KindleApp
             model.currentPage = p;
             updateBook(State.UpdateBookView);
         }
-
-        public void ReturnToReader()
-        {
-            //Implement ReturnToReader
-
-        }
     }
 }
