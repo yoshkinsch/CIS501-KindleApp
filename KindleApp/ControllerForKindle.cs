@@ -84,7 +84,9 @@ namespace KindleApp
             //Implement OopenBookHandler
             ControllerForBook cb = new ControllerForBook( b,marks);
              BookView bv = new BookView( b, cb.handleBookChange,marks);
-            cb.SetDelegate(bv.Update);
+             cb.SetDelegate(bv.Update);
+            Application.Run(bv);
+
 
         }
     }
