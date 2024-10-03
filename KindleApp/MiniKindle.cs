@@ -18,17 +18,24 @@ namespace KindleApp
             _bookmarks = new Dictionary<int, int[]>();
         }
 
-        new Book JorgeVERYfunny = new Book("JorgeVERYfunny","Jorge",1,500);
-        new Book JorgeMAYBEfunny = new Book("JorgeMAYBEfunny", "Jorge 2", 2, 320);
-        new Book JorgeNOTfunny = new Book("JorgeNOTfunny", "Jorge 3", 3, 420);
+        Book JorgeVERYfunny = new Book("JorgeVERYfunny","Jorge",1,500);
+        Book JorgeMAYBEfunny = new Book("JorgeMAYBEfunny", "Jorge 2", 2, 320);
+        Book JorgeNOTfunny = new Book("JorgeNOTfunny", "Jorge 3", 3, 420);
+
+        
 
 
-
+        
         public void UpdateLib()
         {
+            int[] mark = new int[] { 1,1,1,1,1};
             _books.Add(JorgeVERYfunny.ID,JorgeVERYfunny);
             _books.Add(JorgeMAYBEfunny.ID,JorgeMAYBEfunny);
-            _books.Add(JorgeNOTfunny.ID,JorgeNOTfunny); 
+            _books.Add(JorgeNOTfunny.ID,JorgeNOTfunny);
+            _bookmarks.Add(JorgeVERYfunny.ID, mark);
+            _bookmarks.Add(JorgeMAYBEfunny.ID, mark);
+            _bookmarks.Add(JorgeNOTfunny.ID,mark);
+
 
 
         }

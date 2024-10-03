@@ -11,14 +11,13 @@
             this.data = data;
             this.bookInput = bookInput;
             bookmarks = bm;
+            InitializeComponent();
             LoadBookmarkComboBox();
             LoadLabel();
-            InitializeComponent();
         }
 
         private void LoadBookmarkComboBox()
         {
-            BookmarkComboBox.Items.Clear();
             int i = 1;
             foreach (int bm in bookmarks)
             {
