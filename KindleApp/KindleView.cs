@@ -12,6 +12,12 @@ namespace KindleApp
             this.buttonClicked = buttonClicked;
         }
 
+        public void UpdateView(State s)
+        {
+            //Implement
+
+        }
+
         private void SyncButton_Click(object sender, EventArgs e)
         {
             //Implement Sync Button

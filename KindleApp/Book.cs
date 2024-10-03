@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Threading.Tasks;
 
 namespace KindleApp
 {
     public class Book
     {
-        private string name;
-        private string author;
-        private int ID;
-        private int pages;
+        public string name;
+        public string author;
+        public int ID;
+        public int pages;
 
         public int currentPage = 1;
 

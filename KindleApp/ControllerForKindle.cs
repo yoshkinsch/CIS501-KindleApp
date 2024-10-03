@@ -17,15 +17,15 @@ namespace KindleApp
             updateHand = h;
         }
 
-        public void SyncHandler()
+        public void SyncHandler(State s)
         {
             //Implement SyncHandler
 
         }
 
-        public void OpenBookHandler()
+        public void OpenBookHandler(State s, int id)
         {
-            //Implement OopenBookHandler
+            //Implement OpenBookHandler
 
         }
     }
