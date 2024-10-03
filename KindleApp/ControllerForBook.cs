@@ -16,6 +16,7 @@ namespace KindleApp
         public ControllerForBook(Book m, int[] marks)
         {
             model = m;
+            bookmarks = marks;
             
         }
 
