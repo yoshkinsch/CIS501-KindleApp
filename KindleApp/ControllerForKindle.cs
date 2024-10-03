@@ -11,12 +11,16 @@ namespace KindleApp
         private MiniKindle model;
         private UpdateKindleView updateHand;
 
-        public ControllerForKindle(MiniKindle m, UpdateKindleView h)
+        public ControllerForKindle(MiniKindle m)
         {
             model = m;
-            updateHand = h;
+            
         }
 
+        public void setupDel(UpdateKindleView up)
+        {
+            updateHand = up;
+        }
 
         public void buttonclicked(State s, int id)
         {
