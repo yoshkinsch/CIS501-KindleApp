@@ -18,6 +18,7 @@
 
         private void LoadBookmarkComboBox()
         {
+            BookmarkComboBox.Clear();
             int i = 1;
             foreach (int bm in bookmarks)
             {
@@ -36,7 +37,13 @@
 
         public void Update(State s)
         {
-
+            switch (s)
+            {
+                case State.UpdateBookView:
+                    LoadLabel();
+                    LoadBookmarkComboBox();
+                    break;
+            }
         }
 
         #region buttons

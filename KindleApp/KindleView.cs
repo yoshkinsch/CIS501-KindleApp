@@ -38,7 +38,12 @@ namespace KindleApp
 
         public void Update(State s)//implement later
         {
-            
+            switch (s)
+            {
+                case State.UpdateKindleView:
+                    LoadListView();
+                    break;
+            }
         }
 
         private void LoadListView()
