@@ -13,7 +13,25 @@ namespace KindleApp
         public int ID;
         public int pages;
 
-        public int currentPage = 1;
+        
+
+        private int _currentPage = 1;
+
+        public int currentPage
+        {
+            get { return _currentPage; }
+            set
+            {
+                if (value < 1)
+                {
+                    _currentPage = 1;
+                }
+                else
+                {
+                    _currentPage = value;
+                }
+            }
+        }
 
         public Book(string n, string a, int iden, int page)
         {

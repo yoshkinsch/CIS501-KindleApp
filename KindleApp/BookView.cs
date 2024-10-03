@@ -12,6 +12,7 @@
             this.bookInput = bookInput;
             bookmarks = bm;
             InitializeComponent();
+            this.Text = data.name;
             LoadBookmarkComboBox();
             LoadLabel();
         }
@@ -51,7 +52,7 @@
 
         private void AddBookmarkButton_Click(object sender, EventArgs e)
         {
-            bookInput(State.SetBookmark, data.currentPage);
+            bookInput(State.SetBookmark, data.currentPage, BookmarkComboBox.SelectedIndex);
 
         }
 
@@ -67,7 +68,7 @@
             }
             if (bookmarkExits)
             {
-                bookInput(State.RemoveBookmark, data.currentPage);
+                bookInput(State.RemoveBookmark, data.currentPage, -1);
             }
             else { MessageBox.Show("Please go to a bookmarked page to remove the bookmark"); }
 
@@ -75,21 +76,21 @@
 
         private void CloseBookButton_Click(object sender, EventArgs e)
         {
-            bookInput(State.CloseBook, data.currentPage);
-
+            //bookInput(State.CloseBook, data.currentPage);
+            Close();
         }
 
         private void FlipBackwardButton_Click(object sender, EventArgs e)
         {
             int temp = data.currentPage - 1;
-            bookInput(State.GoToPage, temp);
+            bookInput(State.GoToPage, temp, -1);
 
         }
 
         private void FlipForwardButton_Click(object sender, EventArgs e)
         {
             int temp = data.currentPage + 1;
-            bookInput(State.GoToPage, temp);
+            bookInput(State.GoToPage, temp, -1);
 
         }
 
@@ -102,7 +103,7 @@
             else
             {
             KeyValuePair<string, int> selectedBookmark = (KeyValuePair<string, int>)BookmarkComboBox.SelectedItem;
-            bookInput(State.GoToPage, selectedBookmark.Value);
+            bookInput(State.GoToPage, selectedBookmark.Value, -1);
 
             }
         }
@@ -110,7 +111,7 @@
 
         private void GoToPageButton_Click(object sender, EventArgs e)
         {
-            bookInput(State.GoToPage, int.Parse(PageNumberTextBox.Text));
+            bookInput(State.GoToPage, int.Parse(PageNumberTextBox.Text), -1);
         }
     }
 }

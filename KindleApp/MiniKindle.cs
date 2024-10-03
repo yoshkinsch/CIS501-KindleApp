@@ -28,7 +28,7 @@ namespace KindleApp
         
         public void UpdateLib()
         {
-            int[] mark = new int[] { 1,1,1,1,1};
+            int[] mark = new int[] { 1,2,3,4,5};
             _books.Add(JorgeVERYfunny.ID,JorgeVERYfunny);
             _books.Add(JorgeMAYBEfunny.ID,JorgeMAYBEfunny);
             _books.Add(JorgeNOTfunny.ID,JorgeNOTfunny);
