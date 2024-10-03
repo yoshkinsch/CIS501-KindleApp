@@ -8,8 +8,8 @@ namespace KindleApp
 {
     public class MiniKindle
     {
-        private Dictionary<int, Book> _books;
-        private Dictionary<int, int[]> _bookmarks;
+        public Dictionary<int, Book> _books;
+        public Dictionary<int, int[]> _bookmarks;
 
         public MiniKindle()
         {
@@ -17,7 +17,7 @@ namespace KindleApp
             _bookmarks = new Dictionary<int, int[]>();
         }
 
-        public void UpdateLib(List<Book> books)
+        public void UpdateLib()
         {
             //Implement UpdateLib
 

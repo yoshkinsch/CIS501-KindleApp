@@ -16,7 +16,7 @@ namespace KindleApp
         {
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new KindleView());
+            ///Application.Run(new KindleView());
         }
     }
 }

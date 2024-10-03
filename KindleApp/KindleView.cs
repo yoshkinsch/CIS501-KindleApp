@@ -20,7 +20,7 @@ namespace KindleApp
 
         private void OpenButton_Click(object sender, EventArgs e)
         {
-            //Implement open Button
+            
         }
     }
 }
