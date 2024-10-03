@@ -82,8 +82,9 @@ namespace KindleApp
             int[] marks = getBookmarks(id);
             /// Need to create book view and book controller 
             //Implement OopenBookHandler
-            //  ControllerForBook cb = new ControllerForBook( b,marks, );
-            // BookView bv = new BookView( b, //what ever book comes with, bookmarks);
+            ControllerForBook cb = new ControllerForBook( b,marks);
+             BookView bv = new BookView( b, cb.handleBookChange,marks);
+            cb.SetDelegate(bv.Update);
 
         }
     }

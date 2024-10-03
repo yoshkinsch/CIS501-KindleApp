@@ -17,10 +17,7 @@ namespace KindleApp
             // see https://aka.ms/applicationconfiguration.
             
             ApplicationConfiguration.Initialize();
-<<<<<<< Updated upstream
-=======
-            
->>>>>>> Stashed changes
+
             Application.Run(new KindleView());
         }
     }

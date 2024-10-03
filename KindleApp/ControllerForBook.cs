@@ -13,12 +13,16 @@ namespace KindleApp
         private UpdateBookView updateBook;
         private int currentBookmarkCount = 0;
         
-        public ControllerForBook(Book m, int[] marks, UpdateBookView h)
+        public ControllerForBook(Book m, int[] marks)
         {
             model = m;
-            updateBook = h;
+            
         }
 
+        public void SetDelegate(UpdateBookView h)
+        {
+            updateBook = h;
+        }
         public void handleBookChange(State s, int pageNum)
         {
             switch (s)
