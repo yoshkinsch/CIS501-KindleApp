@@ -18,6 +18,7 @@
 
         private void LoadBookmarkComboBox()
         {
+            BookmarkComboBox.Items.Clear();
             int i = 1;
             foreach (int bm in bookmarks)
             {
@@ -32,6 +33,7 @@
         {
             PageNumberLabel.Text = $"Jorge is only 'sometimes' funny \n {data.currentPage}";
             PageNumberTextBox.Text = data.currentPage.ToString();
+            BookmarkComboBox.Text = "";
         }
 
         public void Update(State s)
@@ -56,7 +58,7 @@
         private void RemoveBookmarkButton_Click(object sender, EventArgs e)
         {
             bool bookmarkExits = false;
-            foreach (int bm in bookmarks) 
+            foreach (int bm in bookmarks)
             {
                 if (data.currentPage == bm)
                 {
@@ -79,26 +81,36 @@
 
         private void FlipBackwardButton_Click(object sender, EventArgs e)
         {
-            bookInput(State.GoToPage, data.currentPage--);
+            int temp = data.currentPage - 1;
+            bookInput(State.GoToPage, temp);
 
         }
 
         private void FlipForwardButton_Click(object sender, EventArgs e)
         {
-            bookInput(State.GoToPage, data.currentPage++);
+            int temp = data.currentPage + 1;
+            bookInput(State.GoToPage, temp);
 
-        }
-
-        private void PageNumberTextBox_TextChanged(object sender, EventArgs e)
-        {
-            bookInput(State.GoToPage, int.Parse(PageNumberTextBox.Text));
         }
 
         private void GoToBookmarkButton_Click(object sender, EventArgs e)
         {
+            if(BookmarkComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a bookmark to go to");
+            }
+            else
+            {
             KeyValuePair<string, int> selectedBookmark = (KeyValuePair<string, int>)BookmarkComboBox.SelectedItem;
             bookInput(State.GoToPage, selectedBookmark.Value);
+
+            }
         }
         #endregion
+
+        private void GoToPageButton_Click(object sender, EventArgs e)
+        {
+            bookInput(State.GoToPage, int.Parse(PageNumberTextBox.Text));
+        }
     }
 }

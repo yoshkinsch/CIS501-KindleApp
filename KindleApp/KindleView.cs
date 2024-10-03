@@ -60,8 +60,8 @@ namespace KindleApp
             }
             BookListView.FullRowSelect = true;
             BookListView.View = View.Details;
-            BookListView.Columns.Add("Book", -2);
-            BookListView.Columns.Add("Author", -2);
+            BookListView.Columns.Add("Book", 500);
+            BookListView.Columns.Add("Author", 500);
             BookListView.Columns.Add("Pages", -2);
 
         }

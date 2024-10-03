@@ -85,7 +85,7 @@ namespace KindleApp
             ControllerForBook cb = new ControllerForBook( b,marks);
              BookView bv = new BookView( b, cb.handleBookChange,marks);
              cb.SetDelegate(bv.Update);
-            Application.Run(bv);
+            bv.Show();
 
 
         }
