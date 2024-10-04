@@ -29,6 +29,7 @@
             }
             BookmarkComboBox.DisplayMember = "Key";
             BookmarkComboBox.ValueMember = "Value";
+            BookmarkComboBox.SelectedIndex = 0;
         }
 
         private void LoadLabel()
