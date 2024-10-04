@@ -33,7 +33,7 @@
 
         private void LoadLabel()
         {
-            PageNumberLabel.Text = $"Jorge is only 'sometimes' funny \n {data.currentPage}";
+            PageNumberLabel.Text = data.wordsOnPages[data.currentPage-1];
             PageNumberTextBox.Text = data.currentPage.ToString();
             BookmarkComboBox.Text = "";
         }

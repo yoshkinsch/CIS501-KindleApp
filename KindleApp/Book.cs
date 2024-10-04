@@ -12,8 +12,7 @@ namespace KindleApp
         public string author;
         public int ID;
         public int pages;
-
-        
+        public List<string> wordsOnPages;
 
         private int _currentPage = 1;
 
@@ -43,6 +42,7 @@ namespace KindleApp
             author = a;
             ID = iden;
             pages = page;
+            wordsOnPages = new List<string>();
         }
     }
 }
