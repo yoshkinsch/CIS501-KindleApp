@@ -21,14 +21,9 @@ namespace KindleApp
         Book JorgeVERYfunny = new Book("JorgeVERYfunny","Jorge",1,500);
         Book JorgeMAYBEfunny = new Book("JorgeMAYBEfunny", "Jorge 2", 2, 320);
         Book JorgeNOTfunny = new Book("JorgeNOTfunny", "Jorge 3", 3, 420);
-
-        
-
-
-        
         public void UpdateLib()
         {
-            int[] mark = new int[] { 1,1,1,1,1};
+            int[] mark = new int[] { 2,2,2,2,5};
             _books.Add(JorgeVERYfunny.ID,JorgeVERYfunny);
             _books.Add(JorgeMAYBEfunny.ID,JorgeMAYBEfunny);
             _books.Add(JorgeNOTfunny.ID,JorgeNOTfunny);

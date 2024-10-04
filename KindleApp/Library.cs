@@ -8,6 +8,6 @@ namespace KindleApp
 {
     public class Library
     {
-        private Dictionary<int, Book> cloudBooks;
+         Dictionary<int, Book> cloudBooks;
     }
 }

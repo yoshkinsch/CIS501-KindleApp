@@ -14,6 +14,7 @@
             InitializeComponent();
             LoadBookmarkComboBox();
             LoadLabel();
+
         }
 
         private void LoadBookmarkComboBox()
@@ -75,7 +76,8 @@
 
         private void CloseBookButton_Click(object sender, EventArgs e)
         {
-            bookInput(State.CloseBook, data.currentPage);
+             bookInput(State.CloseBook, data.currentPage);
+            
 
         }
 

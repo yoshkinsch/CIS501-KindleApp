@@ -16,12 +16,20 @@ namespace KindleApp
             model = m;
             
         }
-
+        /// <summary>
+        /// This will allow for program to set the delegate after KiddleView is set.
+        /// </summary>
+        /// <param name="up"> the view to set </param>
         public void setupDel(UpdateKindleView up)
         {
             updateHand = up;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="id"></param>
         public void buttonclicked(State s, int id)
         {
             switch (s)
@@ -85,7 +93,7 @@ namespace KindleApp
             ControllerForBook cb = new ControllerForBook( b,marks);
              BookView bv = new BookView( b, cb.handleBookChange,marks);
              cb.SetDelegate(bv.Update);
-            bv.Show();
+             bv.Show();
 
 
         }
