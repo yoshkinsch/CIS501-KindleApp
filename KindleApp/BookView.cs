@@ -33,7 +33,7 @@
 
         private void LoadLabel()
         {
-            PageNumberLabel.Text = data.wordsOnPages[data.currentPage-1];
+            PageNumberLabel.Text = data.wordsOnPages[data.currentPage-1] + "\n" + data.currentPage;
             PageNumberTextBox.Text = data.currentPage.ToString();
             BookmarkComboBox.Text = "";
         }

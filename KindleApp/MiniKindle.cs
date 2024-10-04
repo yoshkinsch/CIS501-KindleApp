@@ -52,6 +52,10 @@ namespace KindleApp
                     }
                 }
             }
+            else
+            {
+                File.Create("books.txt");
+            }
         }
 
         private string[] SplitBookInfo(string line)
