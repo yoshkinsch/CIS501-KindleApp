@@ -2,7 +2,7 @@ namespace KindleApp
 {
     public delegate void handleButtonClicked(State s, int id);
     public delegate void UpdateKindleView(State s);
-    public delegate void bookInputDel(State s, int pageNum);
+    public delegate void bookInputDel(State s, int pageNum, int bookmarkIndex);
     public delegate void UpdateBookView(State s);
 
     internal static class Program

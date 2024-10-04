@@ -16,14 +16,37 @@ namespace KindleApp
         {
             _books = new Dictionary<int, Book>();
             _bookmarks = new Dictionary<int, int[]>();
+            Book JorgeSuperFunny = new Book("Jorge Super Funny", "jorge the best", 12345678, 999);
+            Book JorgeClassAwesome = new Book("Jorge Class The Best", "jorge the best", 1234, 55);
+            _books.Add(JorgeClassAwesome.ID,JorgeClassAwesome);
+            _books.Add(JorgeSuperFunny.ID, JorgeSuperFunny);
+            _bookmarks.Add(JorgeClassAwesome.ID, new int[] { 1, 2, 3, 4, 5 });
+            _bookmarks.Add(JorgeSuperFunny.ID, new int[] { 1, 2, 3, 4, 5 });
         }
 
-        Book JorgeVERYfunny = new Book("JorgeVERYfunny","Jorge",1,500);
-        Book JorgeMAYBEfunny = new Book("JorgeMAYBEfunny", "Jorge 2", 2, 320);
-        Book JorgeNOTfunny = new Book("JorgeNOTfunny", "Jorge 3", 3, 420);
+        
+
+        
+
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
         public void UpdateLib()
         {
-            int[] mark = new int[] { 2,2,2,2,5};
+            int[] mark = new int[] { 1,1,1,1,1};
             _books.Add(JorgeVERYfunny.ID,JorgeVERYfunny);
             _books.Add(JorgeMAYBEfunny.ID,JorgeMAYBEfunny);
             _books.Add(JorgeNOTfunny.ID,JorgeNOTfunny);
@@ -33,6 +56,10 @@ namespace KindleApp
 
 
 
+            foreach (KeyValuePair<int,Book> kvp in _library)
+            {
+                _books.Add(kvp);
+            }
         }
     }
 }
