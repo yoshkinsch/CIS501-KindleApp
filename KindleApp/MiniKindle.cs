@@ -24,41 +24,18 @@ namespace KindleApp
             _bookmarks.Add(JorgeSuperFunny.ID, new int[] { 1, 2, 3, 4, 5 });
         }
 
-        
-
-        
-
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
         public void UpdateLib()
         {
             int[] mark = new int[] { 1,1,1,1,1};
-            _books.Add(JorgeVERYfunny.ID,JorgeVERYfunny);
-            _books.Add(JorgeMAYBEfunny.ID,JorgeMAYBEfunny);
-            _books.Add(JorgeNOTfunny.ID,JorgeNOTfunny);
-            _bookmarks.Add(JorgeVERYfunny.ID, mark);
-            _bookmarks.Add(JorgeMAYBEfunny.ID, mark);
-            _bookmarks.Add(JorgeNOTfunny.ID,mark);
 
-
-
-            foreach (KeyValuePair<int,Book> kvp in _library)
+            foreach (KeyValuePair<int,Book> kvp in _library.cloudBooks)
             {
-                _books.Add(kvp);
+                if(!_books.ContainsKey(kvp.Key))
+                {
+                    _books.Add(kvp.Key, kvp.Value);
+                    _bookmarks.Add(kvp.Key, mark);
+                }
+               
             }
         }
     }

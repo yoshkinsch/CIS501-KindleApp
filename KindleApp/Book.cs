@@ -26,6 +26,10 @@ namespace KindleApp
                 {
                     _currentPage = 1;
                 }
+                else if(value > pages)
+                {
+                    _currentPage = pages;
+                }
                 else
                 {
                     _currentPage = value;

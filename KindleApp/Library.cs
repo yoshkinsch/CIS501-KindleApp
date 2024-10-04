@@ -8,6 +8,9 @@ namespace KindleApp
 {
     public class Library
     {
+
+      
+
         public Library()
         {
             Book JorgeVERYfunny = new Book("JorgeVERYfunny", "Jorge", 1, 500);
@@ -22,6 +25,7 @@ namespace KindleApp
             cloudBooks.Add(JorgeSuperFunny.ID, JorgeSuperFunny);
         }
 
-        private Dictionary<int, Book> cloudBooks = new Dictionary<int, Book>();
+        public Dictionary<int, Book> cloudBooks = new Dictionary<int, Book>();
+
     }
 }
